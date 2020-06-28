@@ -1,45 +1,50 @@
-package Model;
-
-import java.util.ArrayList;
-import java.util.List;
+package oscurilandia_2;
 
 public class Carro {
-    protected int life;
-    protected List<Coordinates> coordinates;
 
-    protected Carro(int life) {
-        this.life = life;
-        this.coordinates = new ArrayList<>();
-    }
+	private int canOcupa;
+	private String ingreso;
+	private int fila;
+	private int columna;
 
-    public Boolean addCoordinates(Coordinates coordinates) {
-        if (this.coordinates.size() < life) {
-            this.coordinates.add(coordinates);
-            return true;
-        }
-        return false;
-    }
+	public Carro(int canOcupa, String ingreso, int fila, int columna) {
+		this.canOcupa = canOcupa;
+		this.ingreso = ingreso;
+		this.fila = fila;
+		this.columna = columna;
 
-    public Boolean isDead() {
-        return this.coordinates.isEmpty();
-    }
+	}
 
-    public int getLife(){
-        return this.life;
-    }
+	public int getCanOcupa() {
+		return canOcupa;
+	}
 
-    public Boolean containsCoordinates(Coordinates coordinates) {
-        return this.coordinates.stream()
-                .anyMatch(x -> x.getFile() == coordinates.getFile() && x.getColumn() == coordinates.getColumn());
-    }
+	public void setCanOcupa(int canOcupa) {
+		this.canOcupa = canOcupa;
+	}
 
-    public void removeCoordinates(Coordinates coordinates) {
-        this.coordinates
-                .removeIf(x -> x.getFile() == coordinates.getFile() && x.getColumn() == coordinates.getColumn());
-    }
+	public String getIngreso() {
+		return ingreso;
+	}
 
-    public List<Coordinates> getCoordinates() {
-        return coordinates;
-    }
+	public void setIngreso(String ingreso) {
+		this.ingreso = ingreso;
+	}
+
+	public int getFila() {
+		return fila;
+	}
+
+	public void setFila(int fila) {
+		this.fila = fila;
+	}
+
+	public int getColumna() {
+		return columna;
+	}
+
+	public void setColumna(int columna) {
+		this.columna = columna;
+	}
 
 }
