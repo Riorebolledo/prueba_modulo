@@ -1,3 +1,6 @@
+package Model;
+
+import java.util.Random;
 
 public class Coordinates {
     private  int file;
@@ -8,6 +11,12 @@ public class Coordinates {
         this.column = column;
     }
 
+    public Coordinates(){
+        int[] random = new Random().ints(2, 0, 13).toArray();
+        this.file =random[0];
+        this.column = random[1];
+    }
+    
     public int getFile() {
         return file;
     }

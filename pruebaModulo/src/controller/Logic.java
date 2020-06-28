@@ -1,3 +1,7 @@
+package controller;
+
+import Model.Game;
+
 public class Logic {
     private Game game;
     private StartController startController;

@@ -1,4 +1,5 @@
-import javafx.scene.layout.Border;
+package Model;
+import utils.*;
 
 public class Game {
     private State state;

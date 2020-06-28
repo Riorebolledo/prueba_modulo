@@ -1,5 +1,8 @@
+package controller;
 
-public class PutController extends GameController{
+import Model.Game;
+
+public class PutController extends GameController {
 
     public PutController(Game game) {
         super(game);
